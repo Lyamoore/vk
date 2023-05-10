@@ -1,0 +1,100 @@
+$colorBlue: rgb(0, 102, 255);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.wrap {
+    width: 220px;
+    margin: 0 auto;
+}
+
+.form {
+    width: 260px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin: 30px auto 0px;
+    border: 1px solid $colorBlue;
+    box-shadow: 0px 0px 5px 2px rgba(18, 57, 228, 0.466);
+    border-radius: 10px;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.774);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    &__pick {
+        display: flex;
+        column-gap: 15px;
+
+        &__menu {
+            width: 40px;
+            color: red;
+            outline: none;
+        }
+    }
+
+    &__dateAndTime {
+        display: flex;
+        flex-direction: column;
+        row-gap: 7px;
+    }
+
+    &__comment {
+        &__requests {
+            width: 100%;
+            height: 60px;
+            padding: 7px;
+            color: blue;
+            border: none;
+            background-color: rgba(147, 165, 247, 0.267);
+            outline: none;
+            resize: none;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+
+        &__btn {
+            font-size: 18px;
+            color: $colorBlue;
+            font-weight: bold;
+            width: 80px;
+            background-color: rgba(128, 128, 128, 0.315);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        &__delBtn {
+            &:hover {
+                background-color: rgba(255, 0, 0, 0.26);
+                color: red;
+                transition: 0.2s;
+            }
+
+            &:active {
+                background-color: rgba(255, 0, 0, 0.377);
+                color: red;
+            }
+        }
+
+        &__sendBtn {
+            &:hover {
+                background-color: rgba(0, 255, 13, 0.26);
+                color: green;
+                transition: 0.2s;
+            }
+
+            &:active {
+                background-color: rgba(0, 255, 13, 0.377);
+                color: green;
+            }
+        }
+    }
+}
